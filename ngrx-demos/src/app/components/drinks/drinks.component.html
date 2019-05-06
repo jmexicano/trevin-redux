@@ -1,0 +1,12 @@
+<div id="content-container">
+  <div class="card" style="width: 18rem;"  *ngFor="let drink of (drinks$ | async)">
+    <div class="card-header">
+      {{drink.name}}
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Caffine: {{drink.caffenated}} </li>
+      <li class="list-group-item">Rating: {{drink.rating}}/10</li>
+      <li class="list-group-item">Flavor: {{drink.flavor}} </li>
+    </ul>
+  </div>
+</div>
