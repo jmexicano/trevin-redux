@@ -11,6 +11,7 @@ import { DrinksComponent } from './components/drinks/drinks.component';
 import { NavComponent } from './components/nav/nav.component';
 import './include/bootstrap';
 import { metaReducers, reducers } from './reducers';
+import { EditDrinkModalComponent } from './components/edit-drink-modal/edit-drink-modal.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { metaReducers, reducers } from './reducers';
     ClickerComponent,
     NavComponent,
     DrinksComponent,
+    EditDrinkModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +28,9 @@ import { metaReducers, reducers } from './reducers';
     StoreModule.forRoot(reducers, { metaReducers }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     NgbModule
+  ],
+  entryComponents: [
+    EditDrinkModalComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
