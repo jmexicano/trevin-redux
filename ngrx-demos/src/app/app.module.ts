@@ -13,6 +13,7 @@ import './include/bootstrap';
 import { metaReducers, reducers } from './reducers';
 import { EditDrinkModalComponent } from './components/edit-drink-modal/edit-drink-modal.component';
 import { FormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { FormsModule } from '@angular/forms';
     StoreModule.forRoot(reducers, { metaReducers }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     NgbModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   entryComponents: [
     EditDrinkModalComponent

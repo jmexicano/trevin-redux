@@ -1,5 +1,5 @@
 <div id="content-container">
-  <div class="card" style="width: 18rem;"  *ngFor="let drink of (drinks$ | async)">
+  <div class="card" style="width: 18rem;" *ngFor="let drink of (drinks$ | async)">
     <div class="card-header">
       {{drink.name}}
     </div>
@@ -8,5 +8,8 @@
       <li class="list-group-item">Rating: {{drink.rating}}/10</li>
       <li class="list-group-item">Flavor: {{drink.flavor}} </li>
     </ul>
+    <div class="card-footer">
+      <fa-icon [icon]="faEdit" style="cursor: crosshair" (click)="edit(drink)"></fa-icon>
+    </div>
   </div>
 </div>
