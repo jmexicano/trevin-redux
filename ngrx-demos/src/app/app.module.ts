@@ -14,7 +14,10 @@ import { metaReducers, reducers } from './reducers';
 import { EditDrinkModalComponent } from './components/edit-drink-modal/edit-drink-modal.component';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
+import { EffectsModule } from '@ngrx/effects';
+import { JokeComponent } from './components/joke/joke.component';
+import { HttpClientModule } from '@angular/common/http';
+import { JokesEffects } from './effects/jokes/jokes.effects';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     NavComponent,
     DrinksComponent,
     EditDrinkModalComponent,
+    JokeComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     NgbModule,
     FormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule,
+    EffectsModule.forRoot([JokesEffects])
   ],
   entryComponents: [
     EditDrinkModalComponent

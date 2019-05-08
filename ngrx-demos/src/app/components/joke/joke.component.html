@@ -1,0 +1,8 @@
+<p>
+  {{(jokes$ | async)?.joke}}
+</p>
+
+<button class="btn btn-primary" (click)="newJoke()"
+  [disabled]="(jokes$ | async)?.loading || (clicks$ | async) < 20">
+  New Joke
+</button>
