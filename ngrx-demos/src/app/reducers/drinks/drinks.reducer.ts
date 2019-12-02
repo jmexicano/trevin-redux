@@ -1,7 +1,6 @@
-import { ClickerTypes } from 'src/app/actions/clicker/clicker.actions';
-import { ClickerState, DrinksState } from '..';
-import { Drink } from 'src/app/model/Drink';
 import { DrinkTypes } from 'src/app/actions/drinks/drinks.actions';
+import { Drink } from 'src/app/model/Drink';
+import { DrinksState } from '..';
 
 const initialState: DrinksState = {
   drinks: [

@@ -38,6 +38,7 @@ export class EditDrinkModalComponent implements OnInit {
 
   submit() {
     this.store.dispatch(new SaveDrink());
+    this.activeModal.close();
   }
 
   ngOnInit() {
